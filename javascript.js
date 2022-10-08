@@ -9,5 +9,6 @@
     if (perVal == 100) {
         clearInterval(increment);
         container.classList.remove("active");
+        percent.textContent = "Successful";
     }
  }, 100);
