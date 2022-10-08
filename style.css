@@ -9,7 +9,7 @@
 
 body {
     height: 100vh;
-    background-color: #131221;
+    background-color: #b2b1ba;
 }
 
 body,
@@ -22,10 +22,10 @@ body,
 
 .container {
     position: relative;
-    height: 450px;
+    height: 350px;
     width: 350px;
-    border-radius: 16px;
-    background-color: #fff; 
+    border-radius: 50%;
+    background-color: rgb(252, 254, 253); 
     overflow: hidden;
 }
 .container.active {
@@ -56,11 +56,34 @@ body,
 
 .container .overlay {
     position: absolute;
-    height: 440px;
-    width: 340px;
+    height: 335px;
+    width: 335px;
     font-size: 40px;
     font-weight: 500;
     color: #fff;
-    border-radius: 12px;
-    background-color: #131221;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.container.active .overlay {
+    background-color: red;
+}
+
+.container.active .overlay {
+    animation-name: colorFul;
+    animation-duration: 10s;
+}
+
+@keyframes colorFul {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: rgb(213, 213, 45);
+    }
+
+    100% {
+        background-color: green;
+    }
 }
